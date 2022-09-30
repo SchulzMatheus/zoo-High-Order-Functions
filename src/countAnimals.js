@@ -6,19 +6,18 @@ const withParameters = (animal) => {
     return species.find((e) => e.name === animal.specie).residents
       .filter((e) => e.sex === animal.sex).length;
   }
-  const especie = species.find((e) => e.name === animal.specie);
-  return especie.residents.length;
+  return species.find((e) => e.name === animal.specie).residents.length;
 };
 const withoutParameters = () => {
-  const array = {};
+  const objeto = {};
   species.forEach((e) => {
-    array[e.name] = e.residents.length;
+    objeto[e.name] = e.residents.length;
   });
-  return array;
+  return objeto;
 };
 const countAnimals = (animal) => ((!animal) ? withoutParameters() : withParameters(animal));
 
-console.log(countAnimals({ specie: 'bears' }));
+console.log(countAnimals({ specie: 'bears', sex: 'female' }));
 module.exports = countAnimals;
 
 // if (animal.sex !== undefined) {

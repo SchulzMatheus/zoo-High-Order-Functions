@@ -19,13 +19,3 @@ const countAnimals = (animal) => ((!animal) ? withoutParameters() : withParamete
 
 console.log(countAnimals({ specie: 'bears', sex: 'female' }));
 module.exports = countAnimals;
-
-// if (animal.sex !== undefined) {
-//   return species
-//     .find((e) => e.name === animal.specie)
-//     .residents.filter((e) => e.sex === animal.sex)
-//     .length;
-// }
-// return species
-//   .find((e) => e.name === animal.specie)
-//   .residents.length;

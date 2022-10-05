@@ -4,7 +4,7 @@ const animals = species.map((specie) => specie.name);
 const days = Object.keys(hours).map((day) => day);
 const openClose = Object.entries(hours).map((oc) => oc);
 
-const createObjectNoParam = () => {
+const NoParamFunc = () => {
   const obj = {};
   openClose.forEach((entries) => {
     if (entries[0] !== 'Monday') {
@@ -20,7 +20,7 @@ const createObjectNoParam = () => {
   });
   return obj;
 };
-const createObjectWithParam = (param) => {
+const ParamFunc = (param) => {
   const obj = {};
   if (param === 'Monday') {
     obj[param] = { officeHour: 'CLOSED', exhibition: 'The zoo will be closed!' };
@@ -40,6 +40,6 @@ const createObjectWithParam = (param) => {
 const getSchedule = (scheduleTarget) => ((scheduleTarget === undefined
   || !([days, animals]
     .some((e) => e
-      .includes(scheduleTarget)))) ? createObjectNoParam() : createObjectWithParam(scheduleTarget));
+      .includes(scheduleTarget)))) ? NoParamFunc() : ParamFunc(scheduleTarget));
 
 module.exports = getSchedule;

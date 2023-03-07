@@ -16,6 +16,4 @@ const withoutParameters = () => {
   return objeto;
 };
 const countAnimals = (animal) => ((!animal) ? withoutParameters() : withParameters(animal));
-
-console.log(countAnimals({ specie: 'bears', sex: 'female' }));
 module.exports = countAnimals;

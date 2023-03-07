@@ -5,7 +5,7 @@ const days = Object.keys(hours).map((day) => day);
 const openClose = Object.entries(hours).map((oc) => oc);
 
 const NoParamFunc = () => {
-  const obj = {};
+  const obj = {}; 
   openClose.forEach((entries) => {
     if (entries[0] !== 'Monday') {
       obj[entries[0]] = {
